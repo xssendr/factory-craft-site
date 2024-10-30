@@ -1,19 +1,14 @@
 import "@/styles/global.css";
-  import { Inter } from 'next/font/google'
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
-import clsx from "clsx";
-import { Navbar } from "@/components/navbar";
+
 import { Providers } from "./providers";
 
-const font = Inter({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '700'],
-})
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
     default: "FactoryCraft",
+    template: "%s | FactoryCraft",
   },
   description: "favicon",
   icons: {
@@ -34,15 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className={font.className}>
+    <html suppressHydrationWarning lang="en">
       <head />
-      <body
-        className="min-h-screen bg-background font-sans antialiased"
-      >
+      <body className="min-h-screen bg-background font-sans antialiased">
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="flex flex-col h-screen">
             <Navbar />
-            { children }
+            {children}
           </div>
         </Providers>
       </body>

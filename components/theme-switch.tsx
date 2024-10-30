@@ -6,8 +6,8 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
-import { MdSunny } from "react-icons/md"
-import { HiMiniMoon } from "react-icons/hi2"
+import { MdSunny } from "react-icons/md";
+import { HiMiniMoon } from "react-icons/hi2";
 
 export interface ThemeSwitchProps {
   className?: string;

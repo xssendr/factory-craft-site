@@ -1,11 +1,5 @@
-"use client"
-
-import { Button } from "@nextui-org/button";
+"use client";
 
 export default function Home() {
-  return (
-    <>
-
-    </>
-  );
+  return <></>;
 }
